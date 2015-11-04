@@ -25,7 +25,7 @@ class Chess
     until board.checkmate?
       display.renders()
       unless cursor_pos.nil?
-        puts "#run selection: #{board.board[cursor_pos[0]][cursor_pos[1]].color} your color: #{turn_color}"
+        puts "your selection: #{board.board[cursor_pos[0]][cursor_pos[1]].color} your color: #{turn_color}"
       end
       cursor_pos = display.get_input
       if cursor_pos

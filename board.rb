@@ -55,7 +55,7 @@ class Board
   end
 
   def select_piece(row, col)
-    puts 'piece successfully selected'
+    # puts 'piece successfully selected'
 
     selected_piece = board[row][col]
     @selected_piece = selected_piece
@@ -83,7 +83,7 @@ class Board
     board[row][col].loc = [row, col]
     board[@selected_piece_position[0]][@selected_piece_position[1]] = EmptyPiece.new([@selected_piece_position[0], @selected_piece_position[1]])
     unless called_by_clone
-      puts 'King in_check?'
+      # puts 'King in_check?'
       checkmate?
     end
     reset_selected
@@ -91,7 +91,7 @@ class Board
   end
 
   def checkmate?
-    puts "checking checkmate"
+    # puts "checking checkmate"
     if @black_king.checkmate? || @white_king.checkmate?
       puts 'CHECKMATE!'
       return true
@@ -101,7 +101,7 @@ class Board
 
   def in_check?
     # debugger
-    puts 'CALLING IN CHECK'
+    # puts 'CALLING IN CHECK'
     puts 'Black King in Check!' if @black_king.in_check?
 
     puts 'White King in Check!' if @white_king.in_check?
