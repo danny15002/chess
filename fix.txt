@@ -1,0 +1,2 @@
+when king is in check, check if king's move can put him out of check.
+can other piece block check
